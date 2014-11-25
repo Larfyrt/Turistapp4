@@ -976,4 +976,3 @@ namespace testturistapp.testturistapp_XamlTypeInfo
 }
 
 
-
