@@ -1,0 +1,2 @@
+C:\Users\Daniel\Desktop\TuristappFærdig\testturistapp\testturistapp.csproj;neutral
+C:\Users\Daniel\Desktop\TuristappFærdig\testturistappTests\testturistappTests.csproj;neutral
