@@ -17,9 +17,8 @@
     </Page.Background>
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Add" Label="Tilføj rating" Command="{Binding AddCommand}"/>
-            <AppBarButton Icon="ImportAll" Label="Indlæs Ratings" Command ="{Binding LoadCommand}"/>
-            <AppBarButton Icon="Save" Label="Gem Ratings" Command ="{Binding SaveCommand}"/>
+            <AppBarButton Icon="Add" Label="Tilføj rating" Command="{Binding OpretRatingCommand}"/>
+            <AppBarButton Icon="Remove" Label="Fjern Rating" Command ="{Binding RemoveRatingCommand}"/>
         </CommandBar>
     </Page.BottomAppBar>
     <Page.DataContext>
@@ -48,6 +47,14 @@
                   to show details for the current item
         -->
         <Grid x:Name="contentRegion" Grid.Row="1">
+            <FlyoutBase.AttachedFlyout>
+                <MenuFlyout/>
+            </FlyoutBase.AttachedFlyout>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="89*"/>
+                <RowDefinition Height="187*"/>
+                <RowDefinition Height="38*"/>
+            </Grid.RowDefinitions>
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -55,42 +62,54 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="939*"/>
-                <ColumnDefinition Width="337*"/>
-                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="132*"/>
+                <ColumnDefinition Width="142*"/>
+                <ColumnDefinition Width="142*"/>
+                <ColumnDefinition Width="222*"/>
+                <ColumnDefinition Width="45*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Left" Margin="360,30,0,0" TextWrapping="Wrap" Text="{Binding SelectedKategori.Navn}" VerticalAlignment="Top" Height="63" Width="550" FontSize="53.333" Foreground="#FFD6EBFF"/>
-            <TextBlock HorizontalAlignment="Left" Margin="360,118,0,0" TextWrapping="Wrap" Text="{Binding SelectedKategori.Beskrivelse}" VerticalAlignment="Top" Height="87" RenderTransformOrigin="0.5,0.5" Width="486" FontSize="12"/>
-            <Image HorizontalAlignment="Left" Height="334" Margin="878,204,0,0" VerticalAlignment="Top" Width="459" Source="{Binding SelectedKategori.Billede2}" Grid.ColumnSpan="3"/>
-            <StackPanel HorizontalAlignment="Left" Height="252" Margin="316,279,0,0" VerticalAlignment="Top" Width="233">
+            <TextBlock HorizontalAlignment="Left" Margin="0,30,0,0" TextWrapping="Wrap" Text="{Binding SelectedKategori.Navn}" VerticalAlignment="Top" Height="63" Width="550" FontSize="53.333" Foreground="#FFD6EBFF" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="0,118,0,0" TextWrapping="Wrap" Text="{Binding SelectedKategori.Beskrivelse}" VerticalAlignment="Top" Height="87" RenderTransformOrigin="0.5,0.5" Width="486" FontSize="12" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Image HorizontalAlignment="Left" Height="370" Margin="29,4,0,0" VerticalAlignment="Top" Width="415" Source="{Binding SelectedKategori.Billede2}" Grid.Column="3" Grid.Row="1"/>
+            <StackPanel HorizontalAlignment="Left" Height="252" Margin="52,101,0,0" VerticalAlignment="Top" Width="233" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1">
                 <TextBlock TextWrapping="Wrap" FontSize="26.667" Height="39">
                 	<Run Text="Navn"/>
                 </TextBlock>
-                <TextBlock TextWrapping="Wrap" Text="{Binding SelectedRating.Name}" FontSize="20" FontStyle="Italic" Foreground="#FFF3EFEF" Height="32"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Rating.selectedRating.Name}" FontSize="20" FontStyle="Italic" Foreground="#FFF3EFEF" Height="32"/>
                 <TextBlock TextWrapping="Wrap" Text="Kommentar" FontSize="26.667" Height="36"/>
-                <TextBlock TextWrapping="Wrap" Text="{Binding SelectedRating.RatingComment}" Height="83" FontSize="20" FontStyle="Italic"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Rating.selectedRating.RatingComment, Mode=TwoWay}" Height="83" FontSize="20" FontStyle="Italic"/>
                 <TextBlock TextWrapping="Wrap" FontSize="26.667" Text="Antal Stjerner"/>
-                <TextBlock TextWrapping="Wrap" Text="{Binding SelectedRating.RatingSjerner}" FontSize="20" FontStyle="Italic"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Rating.selectedRating.RatingSjerner, Mode=TwoWay}" FontSize="20" FontStyle="Italic"/>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Left" Margin="600,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="207" FontSize="26.667">
+            <TextBlock HorizontalAlignment="Left" Margin="52,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="232" FontSize="26.667" Grid.Column="2" Grid.Row="1">
             	<Run Text="Giv Vurdering"/>
             </TextBlock>
-            <StackPanel HorizontalAlignment="Left" Height="252" Margin="600,279,0,0" VerticalAlignment="Top" Width="233">
+            <StackPanel HorizontalAlignment="Left" Height="273" Margin="52,101,0,0" VerticalAlignment="Top" Width="233" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1">
                 <TextBlock TextWrapping="Wrap" Height="39" FontSize="26.667">
                 	<Run Text="Navn"/>
 
                 </TextBlock>
-                <TextBox TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" Height="19" HorizontalAlignment="Left" Width="233"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding Rating.Name, Mode=TwoWay}" Height="19" HorizontalAlignment="Left" Width="233"/>
                 <TextBlock TextWrapping="Wrap" Text="Kommentar" Height="36" FontSize="26.667"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding RatingComment, Mode=TwoWay}" Height="83"/>
-                <TextBlock TextWrapping="Wrap" Text="Stjerner (1-5)" Height="32" FontSize="26.667"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding RatingStjerner, Mode=TwoWay}"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding Rating.Comment, Mode=TwoWay}" Height="83"/>
+                <TextBlock TextWrapping="Wrap" Text="Vurdering" Height="32" FontSize="26.667"/>
+                <ComboBox x:Name="RatingComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="233" SelectedIndex="0" Height="35" IsSynchronizedWithCurrentItem="False">
+                    <ComboBoxItem Content="Angiv vurdering" Width="233" VerticalAlignment="Top"/>
+                    <ComboBoxItem Content="1" Width="233"/>
+                    <ComboBoxItem Content="2" Width="233"/>
+                    <ComboBoxItem Content="3" Width="233"/>
+                    <ComboBoxItem Content="4" Width="233"/>
+                    <ComboBoxItem Content="5" Width="233"/>
+                </ComboBox>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Left" Margin="316,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="189" FontSize="26.667">
+            <TextBlock HorizontalAlignment="Left" Margin="52,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="232" FontSize="26.667" Grid.Column="1" Grid.Row="1">
             	<Run Text="Givet Vurdering"/>
             </TextBlock>
-            <ListBox HorizontalAlignment="Left" Height="211" Margin="60,320,0,0" VerticalAlignment="Top" Width="204" ItemsSource="{Binding Ratings}" SelectedItem="{Binding SelectedRating, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="#CCFFFFFF"/>
-            <TextBlock HorizontalAlignment="Left" Margin="60,234,0,0" TextWrapping="Wrap" Text="Vurderinger" VerticalAlignment="Top" Height="39" Width="150" FontSize="26.667"/>
+            <ListView HorizontalAlignment="Left" Height="211" Margin="188,142,0,0" VerticalAlignment="Top" Width="204" ItemsSource="{Binding SelectedKategori.Vurderinger}" SelectedItem="{Binding Rating.selectedRating, Mode=TwoWay}" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="60,56,0,0" TextWrapping="Wrap" Text="Vurderinger" VerticalAlignment="Top" Height="48" Width="204" FontSize="26.667" Grid.Row="1"/>
+            <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="172,66,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBoxItem Content="2" Height="100" Width="100"/>
+            </ComboBox>
         </Grid>
 
         <!-- Back button and page title -->

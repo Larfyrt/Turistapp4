@@ -153,9 +153,6 @@
   <data name="AppContainerActivationFailure" xml:space="preserve">
     <value>Failed to launch test executor for the Windows Store app with error code {0}.</value>
   </data>
-  <data name="PrerequisiteWinPhone8Dot1OrHigher" xml:space="preserve">
-    <value>To run tests for a Windows Phone XAML app, target must be Windows Phone 8.1 or higher.</value>
-  </data>
   <data name="SourceIncompatible" xml:space="preserve">
     <value>{0} is built for Framework {1} and Platform {2}.</value>
   </data>

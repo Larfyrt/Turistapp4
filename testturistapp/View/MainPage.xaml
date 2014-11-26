@@ -14,6 +14,20 @@
     </Page.BottomAppBar>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="136*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="264*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
@@ -21,16 +35,23 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <TextBlock HorizontalAlignment="Left" Margin="108,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="305" FontSize="35" Text="Vælg attraktion"/>
-        <ListBox x:Name="SelectionBox" HorizontalAlignment="Left" Height="125" Margin="108,360,0,0" SelectionChanged="Selector_OnSelectionChanged" VerticalAlignment="Top" Width="284" ItemsSource="{Binding Kategoriviser}" Background="#CCF7F1F1" Foreground="#FF0A0909" BorderBrush="#FFC7BABA"/>
-        <Button Content="Næste" HorizontalAlignment="Left" Margin="105,545,0,0" VerticalAlignment="Top" Click="Button_Click" Foreground="White" Height="72" Width="290" FontSize="40"/>
-        <TextBlock HorizontalAlignment="Left" Margin="245,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="137" Width="784" FontSize="100" FontFamily="Arial" Foreground="#FFD6EBFF">
+        <TextBlock HorizontalAlignment="Left" Margin="0,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="121" Width="420" FontSize="62" Text="Vælg attraktion" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <ListView x:Name="SelectionBox" HorizontalAlignment="Left" Height="153" Margin="0,164,0,0" SelectionChanged="Selector_OnSelectionChanged" VerticalAlignment="Top" Width="420" ItemsSource="{Binding Kategoriviser}" Foreground="White" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" FontSize="1" CanDragItems="True">
+            <ListView.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.BorderBrush>
+        </ListView>
+        <Button Content="Næste" HorizontalAlignment="Left" Margin="39,355,0,0" VerticalAlignment="Top" Click="Button_Click" Foreground="White" Height="96" Width="338" FontSize="40" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="137" Width="794" FontSize="100" FontFamily="Arial" Foreground="#FFD6EBFF" Grid.Column="2" Grid.ColumnSpan="3">
         	<Run Text="Besøg Roskilde"/>
         	<LineBreak/>
         	<Run/>
         </TextBlock>
-        <Image x:Name="SelectedImage" HorizontalAlignment="Left" Source="../Assets/rostorv.jpg" Height="419" Margin="699,256,0,0" VerticalAlignment="Top" Width="604" RenderTransformOrigin="0.48,0.221"/>
-        <Image HorizontalAlignment="Left" Height="172" Margin="1190,10,0,0" Source="../Assets/RSLOGO.png " VerticalAlignment="Top" Width="176"/>
+        <Image x:Name="SelectedImage" HorizontalAlignment="Left" Source="../Assets/rostorv.jpg" Height="506" Margin="0,38,0,0" VerticalAlignment="Top" Width="728" RenderTransformOrigin="0.48,0.221" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="178" Margin="42,10,-22,0" Source="../Assets/RSLOGO.png " VerticalAlignment="Top" Width="218" Grid.Column="5" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>

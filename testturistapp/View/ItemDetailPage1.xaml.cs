@@ -97,5 +97,10 @@ namespace testturistapp.View
         }
 
         #endregion
+
+        private void RatingComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }
