@@ -4,8 +4,10 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Windows.UI.StartScreen;
 using testturistapp.Annotations;
 using testturistapp.Model;
@@ -20,20 +22,30 @@ namespace testturistapp.Viewmodel
       private Rating _selectedRating;
 
       public Kategori selectedKategori { get; set; }
+      
+      
 
       public Rating selectedRating
       {
           get { return _selectedRating; }
           set { _selectedRating = value; OnPropertyChanged("selectedRating"); }
       }
-
       public void CheckName(string name)
         {
-            if (string.IsNullOrEmpty(name) || 30 < name.Length)
+            if (string.IsNullOrEmpty(name) || 30 > name.Length)
             {
-                throw new ArgumentException("N");
+                throw new ArgumentException("Max 30 cifre");
             }
         }
+
+      public void CheckRating(string rating)
+      {
+          if (string.IsNullOrEmpty(rating) || rating.Length < 1)
+          {
+              throw new ArgumentException("max 30 cifre");
+              
+          }
+      }
 
         public string Name
         {
@@ -62,7 +74,7 @@ namespace testturistapp.Viewmodel
         {
             this.selectedKategori = selectedKategori;
         }
-
+      
         public void opretRating()
         {
             Rating r = new Rating(_name,_comment,_ratingStjerner);

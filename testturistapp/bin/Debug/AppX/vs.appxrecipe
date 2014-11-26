@@ -7,7 +7,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>41d6f1dd-d293-4c54-8d17-38f93e7c3168</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Daniel\Desktop\Turistapp4\testturistapp\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\obj\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>08E47BBAC8C5585A8262EFC09D837F38434619994057DF7A01E627055444E0A8</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>41d6f1dd-d293-4c54-8d17-38f93e7c3168_1.0.0.0_neutral__evv0za3d0das2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>41d6f1dd-d293-4c54-8d17-38f93e7c3168_evv0za3d0das2!App</RegisteredUserModeAppID>
@@ -17,92 +17,92 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-21T12:07:16.143</Modified>
+      <Modified>2014-11-25T14:23:57.174</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\testturistapp.exe">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\testturistapp.exe">
       <PackagePath>testturistapp.exe</PackagePath>
-      <Modified>2014-11-25T08:56:27.808</Modified>
+      <Modified>2014-11-25T14:33:47.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\CafeVivaldi2.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\CafeVivaldi2.jpg">
       <PackagePath>Assets\CafeVivaldi2.jpg</PackagePath>
-      <Modified>2014-11-10T15:00:53.559</Modified>
+      <Modified>2014-11-25T11:10:53.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\logo-roskilde.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\logo-roskilde.jpg">
       <PackagePath>Assets\logo-roskilde.jpg</PackagePath>
-      <Modified>2014-11-06T11:50:19.696</Modified>
+      <Modified>2014-11-25T11:10:53.320</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\rostorv.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\rostorv.jpg">
       <PackagePath>Assets\rostorv.jpg</PackagePath>
-      <Modified>2014-10-31T09:46:00.597</Modified>
+      <Modified>2014-11-25T11:10:53.327</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\RosTorv2.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\RosTorv2.jpg">
       <PackagePath>Assets\RosTorv2.jpg</PackagePath>
-      <Modified>2014-11-10T15:00:20.415</Modified>
+      <Modified>2014-11-25T11:10:53.300</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\vikingemuseet.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\vikingemuseet.jpg">
       <PackagePath>Assets\vikingemuseet.jpg</PackagePath>
-      <Modified>2014-10-31T09:51:51.019</Modified>
+      <Modified>2014-11-25T11:10:53.331</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\VikingeMuseet2.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\VikingeMuseet2.jpg">
       <PackagePath>Assets\VikingeMuseet2.jpg</PackagePath>
-      <Modified>2014-11-10T15:01:30.005</Modified>
+      <Modified>2014-11-25T11:10:53.317</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\vivaldi.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\vivaldi.jpg">
       <PackagePath>Assets\vivaldi.jpg</PackagePath>
-      <Modified>2014-11-05T11:52:10.493</Modified>
+      <Modified>2014-11-25T11:10:53.336</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-10T15:32:15.031</Modified>
+      <Modified>2014-11-25T11:10:53.234</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\RSLOGO.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\RSLOGO.png">
       <PackagePath>Assets\RSLOGO.png</PackagePath>
-      <Modified>2014-11-06T12:06:40.000</Modified>
+      <Modified>2014-11-25T11:10:53.238</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\RSLOGOBackGround.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\RSLOGOBackGround.scale-100.png">
       <PackagePath>Assets\RSLOGOBackGround.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-10T15:36:42.650</Modified>
+      <Modified>2014-11-25T11:10:53.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2014-11-25T11:10:53.302</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2014-11-25T11:10:53.305</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2014-11-25T11:10:53.313</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-11-21T12:07:14.454</Modified>
+      <Modified>2014-11-25T12:07:14.523</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\View\ItemDetailPage1.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\View\ItemDetailPage1.xbf">
       <PackagePath>View\ItemDetailPage1.xbf</PackagePath>
-      <Modified>2014-11-25T08:43:49.036</Modified>
+      <Modified>2014-11-25T14:23:20.391</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\View\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
-      <Modified>2014-11-21T12:07:14.457</Modified>
+      <Modified>2014-11-25T12:07:14.527</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\testturistapp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\testturistapp.xr.xml">
       <PackagePath>testturistapp.xr.xml</PackagePath>
-      <Modified>2014-11-25T08:42:02.119</Modified>
+      <Modified>2014-11-25T14:23:20.261</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\testturistapp\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-21T12:07:15.792</Modified>
+      <Modified>2014-11-25T14:23:56.681</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

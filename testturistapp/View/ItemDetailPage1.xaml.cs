@@ -97,5 +97,9 @@ namespace testturistapp.View
         }
 
         #endregion
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
