@@ -17,7 +17,7 @@
     </Page.Background>
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Add" Label="Tilføj rating" Command="{Binding OpretRatingCommand}"/>
+            <AppBarButton Icon="Add" Label="Tilføj rating" Command="{Binding AddCommand}"/>
             <AppBarButton Icon="Remove" Label="Fjern Rating" Command ="{Binding RemoveRatingCommand}"/>
         </CommandBar>
     </Page.BottomAppBar>

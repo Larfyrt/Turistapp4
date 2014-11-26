@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\testturistapp.exe">
       <PackagePath>testturistapp.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\Assets\CafeVivaldi2.jpg">
       <PackagePath>Assets\CafeVivaldi2.jpg</PackagePath>
     </AppxPackagedFile>

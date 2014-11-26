@@ -182,3 +182,7 @@ C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\obj\Debug\qualifiers.t
 C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\obj\Debug\ProjectArchitectures.txt
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\obj\Debug\testturistapp.csprojResolveAssemblyReference.cache
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\obj\Debug\testturistapp.csproj.GenerateResource.Cache

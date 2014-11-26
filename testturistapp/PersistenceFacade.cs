@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using Windows.Storage;
 using Newtonsoft.Json;
 using testturistapp.Model;
@@ -13,24 +15,41 @@ namespace testturistapp
 {
     class PersistenceFacade
     {
-        private static string jsonFileName = "RatingAsJson.Dat";
+        private static string jsonFileName = "RatingsAsJson .dat";
+        private static string xmlFileName = "RatingsAsXML.dat";
 
-        public static async void SavePersonsAsJsonAsync(ObservableCollection<Kategori> Kategorier)
+        public static async void SaveRatingsAsJsonAsync(ObservableCollection<Rating> ratings)
         {
-            string RatingJsonString = JsonConvert.SerializeObject(Kategorier);
-            SerializeRatingsFileAsync(RatingJsonString, jsonFileName);
+            string ratingsJsonString = JsonConvert.SerializeObject(ratings);
+            SerializeRatingsFileAsync(ratingsJsonString, jsonFileName);
         }
 
-        public static async Task<List<Kategori>> LoadPersonsFromJsonAsync()
+        public static async Task<List<Rating>> LoadRatingsFromJsonAsync()
         {
-            string personsJsonString = await DeSerializeRatingsFileAsync(jsonFileName);
-            return (List<Kategori>)JsonConvert.DeserializeObject(personsJsonString, typeof(List<Person>));
+            string ratingsJsonString = await DeSerializeRatingsFileAsync(jsonFileName);
+            return (List<Rating>)JsonConvert.DeserializeObject(ratingsJsonString, typeof(List<Rating>));
         }
 
-        public static async void SerializeRatingsFileAsync(string PersonsString, string fileName)
+        public static async void SaveRatingsAsXmlAsync(ObservableCollection<Rating> ratings)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(ratings.GetType());
+            StringWriter textWriter = new StringWriter();
+            xmlSerializer.Serialize(textWriter, ratings);
+            SerializeRatingsFileAsync(textWriter.ToString(), xmlFileName);
+        }
+
+        public static async Task<ObservableCollection<Rating>> LoadRatingsFromXmlAsync()
+        {
+            string ratingsXmlString = await DeSerializeRatingsFileAsync(xmlFileName);
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(ObservableCollection<Rating>));
+            return (ObservableCollection<Rating>)xmlSerializer.Deserialize(new StringReader(ratingsXmlString));
+        }
+
+
+        public static async void SerializeRatingsFileAsync(string RatingsString, string fileName)
         {
             StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(localFile, PersonsString);
+            await FileIO.WriteTextAsync(localFile, RatingsString);
         }
 
         public static async Task<string> DeSerializeRatingsFileAsync(String fileName)

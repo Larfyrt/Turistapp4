@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Windows.UI.StartScreen;
 using testturistapp.Annotations;
 using testturistapp.Model;
+using testturistapp.Common;
 
 namespace testturistapp.Viewmodel
 {
@@ -53,15 +54,10 @@ namespace testturistapp.Viewmodel
             set { _ratingStjerner = value; }
         }
 
-        public RatingHandler()
-        {
-           
-        }
-
-        public RatingHandler(Kategori selectedKategori)
+        /*public RatingHandler(Kategori selectedKategori)
         {
             this.selectedKategori = selectedKategori;
-        }
+        }*/
 
         public void opretRating()
         {
@@ -88,5 +84,31 @@ namespace testturistapp.Viewmodel
 
       #endregion
 
+        private MainViewModel mainViewModel;
+
+        public RatingHandler(MainViewModel mainViewModel)
+        {
+            this.mainViewModel = mainViewModel;
+        }
+
+        public void AddRatings()
+        {
+            mainViewModel.AddRatings();
+        }
+
+        public async void SaveRatingsAsync()
+        {
+            PersistenceFacade.SaveRatingsAsXmlAsync(mainViewModel.Ratings);
+        }
+
+        public async void LoadRatingsAsync()
+        {
+            ObservableCollection<Rating> ratings = await PersistenceFacade.LoadRatingsFromXmlAsync();
+            mainViewModel.Ratings.Clear();
+            foreach (var rating in ratings)
+            {
+             mainViewModel.Ratings.Add(rating);   
+            }
+        }
     }
 }
