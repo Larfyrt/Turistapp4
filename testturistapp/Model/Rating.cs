@@ -40,6 +40,11 @@ namespace testturistapp.Model
             _ratingSjerner = ratingSjerner;
         }
 
+       public Rating()
+       {
+           
+       }
+
         public override string ToString()
         {
             return _name;

@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-26T08:55:04.791</Modified>
+      <Modified>2014-11-26T09:21:52.269</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\testturistapp.exe">
       <PackagePath>testturistapp.exe</PackagePath>
-      <Modified>2014-11-26T08:55:03.969</Modified>
+      <Modified>2014-11-26T09:23:11.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -90,23 +90,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-11-25T11:28:21.536</Modified>
+      <Modified>2014-11-26T09:21:51.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\View\ItemDetailPage1.xbf">
       <PackagePath>View\ItemDetailPage1.xbf</PackagePath>
-      <Modified>2014-11-26T08:55:03.640</Modified>
+      <Modified>2014-11-26T09:23:10.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
-      <Modified>2014-11-26T08:55:03.640</Modified>
+      <Modified>2014-11-26T09:21:51.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\testturistapp.xr.xml">
       <PackagePath>testturistapp.xr.xml</PackagePath>
-      <Modified>2014-11-26T08:55:03.380</Modified>
+      <Modified>2014-11-26T09:23:10.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-26T08:55:04.385</Modified>
+      <Modified>2014-11-26T09:21:51.957</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

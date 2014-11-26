@@ -66,6 +66,12 @@ namespace testturistapp.Viewmodel
             
         }
 
+        public RatingHandler()
+        {
+          
+
+        }
+
         public void sletRating()
         {
             selectedKategori.Vurderinger.Remove(selectedRating);

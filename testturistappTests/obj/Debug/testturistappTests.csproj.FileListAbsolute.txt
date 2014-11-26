@@ -196,3 +196,5 @@ C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\obj\Debug\qualifi
 C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\obj\Debug\ProjectArchitectures.txt
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\bin\Debug\Newtonsoft.Json.xml

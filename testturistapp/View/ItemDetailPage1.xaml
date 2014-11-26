@@ -18,7 +18,8 @@
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton Icon="Add" Label="Tilføj rating" Command="{Binding AddCommand}"/>
-            <AppBarButton Icon="Remove" Label="Fjern Rating" Command ="{Binding RemoveRatingCommand}"/>
+            <AppBarButton Icon="ImportAll" Label="Indlæs Ratings" Command ="{Binding LoadCommand}"/>
+            <AppBarButton Icon="Save" Label="Gem Ratings" Command ="{Binding SaveCommand}"/>
         </CommandBar>
     </Page.BottomAppBar>
     <Page.DataContext>
@@ -65,11 +66,11 @@
                 <TextBlock TextWrapping="Wrap" FontSize="26.667" Height="39">
                 	<Run Text="Navn"/>
                 </TextBlock>
-                <TextBlock TextWrapping="Wrap" Text="{Binding Rating.selectedRating.Name}" FontSize="20" FontStyle="Italic" Foreground="#FFF3EFEF" Height="32"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding SelectedRating.Name}" FontSize="20" FontStyle="Italic" Foreground="#FFF3EFEF" Height="32"/>
                 <TextBlock TextWrapping="Wrap" Text="Kommentar" FontSize="26.667" Height="36"/>
-                <TextBlock TextWrapping="Wrap" Text="{Binding Rating.selectedRating.RatingComment, Mode=TwoWay}" Height="83" FontSize="20" FontStyle="Italic"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding SelectedRating.RatingComment}" Height="83" FontSize="20" FontStyle="Italic"/>
                 <TextBlock TextWrapping="Wrap" FontSize="26.667" Text="Antal Stjerner"/>
-                <TextBlock TextWrapping="Wrap" Text="{Binding Rating.selectedRating.RatingSjerner, Mode=TwoWay}" FontSize="20" FontStyle="Italic"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding SelectedRating.RatingSjerner}" FontSize="20" FontStyle="Italic"/>
             </StackPanel>
             <TextBlock HorizontalAlignment="Left" Margin="600,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="207" FontSize="26.667">
             	<Run Text="Giv Vurdering"/>
@@ -79,16 +80,16 @@
                 	<Run Text="Navn"/>
 
                 </TextBlock>
-                <TextBox TextWrapping="Wrap" Text="{Binding Rating.Name, Mode=TwoWay}" Height="19" HorizontalAlignment="Left" Width="233"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" Height="19" HorizontalAlignment="Left" Width="233"/>
                 <TextBlock TextWrapping="Wrap" Text="Kommentar" Height="36" FontSize="26.667"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding Rating.Comment, Mode=TwoWay}" Height="83"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding RatingComment, Mode=TwoWay}" Height="83"/>
                 <TextBlock TextWrapping="Wrap" Text="Stjerner (1-5)" Height="32" FontSize="26.667"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding Rating.RatingStjerner, Mode=TwoWay}"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding RatingStjerner, Mode=TwoWay}"/>
             </StackPanel>
             <TextBlock HorizontalAlignment="Left" Margin="316,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="189" FontSize="26.667">
             	<Run Text="Givet Vurdering"/>
             </TextBlock>
-            <ListBox HorizontalAlignment="Left" Height="211" Margin="60,320,0,0" VerticalAlignment="Top" Width="204" ItemsSource="{Binding SelectedKategori.Vurderinger}" SelectedItem="{Binding Rating.selectedRating, Mode=TwoWay}" Background="#CCFFFFFF"/>
+            <ListBox HorizontalAlignment="Left" Height="211" Margin="60,320,0,0" VerticalAlignment="Top" Width="204" ItemsSource="{Binding Ratings}" SelectedItem="{Binding SelectedRating, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="#CCFFFFFF"/>
             <TextBlock HorizontalAlignment="Left" Margin="60,234,0,0" TextWrapping="Wrap" Text="Vurderinger" VerticalAlignment="Top" Height="39" Width="150" FontSize="26.667"/>
         </Grid>
 

@@ -21,7 +21,7 @@ namespace testturistapp.View
             this.InitializeComponent();
             vm = new MainViewModel();
             DataContext = vm;
-            SelectionBox.SelectedIndex = 0;
+            //SelectionBox.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
