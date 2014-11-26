@@ -9,7 +9,7 @@
     mc:Ignorable="d">
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Accept" Label="AppBarButton"/>
+            <AppBarButton Icon="Accept" Label="AppBarButton" Click="AppBarButton_Click"/>
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -31,6 +31,7 @@
         </TextBlock>
         <Image x:Name="SelectedImage" HorizontalAlignment="Left" Source="../Assets/rostorv.jpg" Height="419" Margin="699,256,0,0" VerticalAlignment="Top" Width="604" RenderTransformOrigin="0.48,0.221"/>
         <Image HorizontalAlignment="Left" Height="172" Margin="1190,10,0,0" Source="../Assets/RSLOGO.png " VerticalAlignment="Top" Width="176"/>
+        <Rectangle x:Name="Discomode" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="566,533,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Page>

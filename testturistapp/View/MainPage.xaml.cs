@@ -1,7 +1,9 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 using System;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using testturistapp.Model;
 using testturistapp.Viewmodel;
@@ -32,6 +34,36 @@ namespace testturistapp.View
         {
             MainViewModel.SelectedKategori = vm.Kategoriviser[SelectionBox.SelectedIndex];
             SelectedImage.Source = new BitmapImage(new Uri(MainViewModel.SelectedKategori.Billede));
+        }
+
+        int A = 0;
+
+        private async void AppBarButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            while (true)
+            {
+                A++;
+                if (A == 1)
+                {
+                    Discomode.Fill = new SolidColorBrush(Colors.Blue);
+                }
+                if (A == 2)
+                {
+                    Discomode.Fill = new SolidColorBrush(Colors.Red);
+                }
+                if (A == 3)
+                {
+                    Discomode.Fill = new SolidColorBrush(Colors.Yellow);
+                }
+                if (A == 4)
+                {
+                    Discomode.Fill = new SolidColorBrush(Colors.Green);
+                }
+                if (A == 5)
+                {
+                    A = 1;
+                }
+            }
         }
     }
 }
