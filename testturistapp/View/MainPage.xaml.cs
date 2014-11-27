@@ -1,7 +1,9 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 using System;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using testturistapp.Model;
 using testturistapp.Viewmodel;
@@ -19,7 +21,7 @@ namespace testturistapp.View
             this.InitializeComponent();
             vm = new MainViewModel();
             DataContext = vm;
-            SelectionBox.SelectedIndex = 0;
+            //SelectionBox.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)

@@ -1,2 +1,2 @@
-C:\Users\Daniel\Desktop\TuristappFærdig\testturistapp\testturistapp.csproj;neutral
-C:\Users\Daniel\Desktop\TuristappFærdig\testturistappTests\testturistappTests.csproj;neutral
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\testturistapp.csproj;neutral
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistappTests\testturistappTests.csproj;neutral

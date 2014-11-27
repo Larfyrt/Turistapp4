@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 C:\Users\Daniel\Desktop\Turistapp4\Turistapp4\testturistapp\testturistapp.csproj;neutral
+=======
+C:\Users\Kasper\Documents\GitHub\Turistapp4\testturistapp\testturistapp.csproj;neutral
+>>>>>>> origin/master
